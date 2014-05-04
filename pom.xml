@@ -7,41 +7,55 @@
         <artifactId>oss-parent</artifactId>
         <version>7</version>
     </parent>
-    
+
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
+    <!--artifactId>WEBJAR_ID</artifactId-->
     <artifactId>foundation-icons-font</artifactId>
+    <!--version>UPSTREAM_VERSION-SNAPSHOT</version-->
     <version>3.0.0</version>
+    <!--name>WEBJAR_NAME</name-->
     <name>Foundation Icons Font</name>
+    <!--description>WebJar for WEBJAR_NAME</description-->
     <description>WebJar for Zurb Foundation Icons Font</description>
     <url>http://webjars.org</url>
 
     <developers>
         <developer>
+            <!--id>YOUR_ID</id-->
             <id>eric.lemerdy</id>
+            <!--name>YOUR_NAME</name-->
             <name>Éric Le Merdy</name>
+            <!--email>YOUR_EMAIL</email-->
             <email>eric.lemerdy@laposte.net</email>
         </developer>
     </developers>
 
     <licenses>
         <license>
+            <!--name>UPSTREAM_LICENSE_NAME</name-->
             <name>Copyright</name>
+            <!--url>UPSTREAM_LICENSE_VERSION</url-->
             <url>https://github.com/zurb/foundation-icons/blob/master/MIT-LICENSE.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
 
     <scm>
+        <!--url>http://github.com/webjars/WEBJAR_ID</url-->
         <url>http://github.com/webjars/WEBJAR_ID</url>
-        <connection>scm:git:https://github.com/webjars/WEBJAR_ID.git</connection>
-        <developerConnection>scm:git:https://github.com/webjars/WEBJAR_ID.git</developerConnection>
+        <!--connection>scm:git:https://github.com/webjars/WEBJAR_ID.git</connection-->
+        <connection>scm:git:https://github.com/webjars/foundation-icons-font.git</connection>
+        <!--developerConnection>scm:git:https://github.com/webjars/WEBJAR_ID.git</developerConnection-->
+        <developerConnection>scm:git:https://github.com/webjars/foundation-icons-font.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--upstream.version>UPSTREAM_VERSION</upstream.version-->
         <upstream.version>3.0.0</upstream.version>
+        <!--upstream.url>UPSTREAM_URL</upstream.url-->
         <upstream.url>https://github.com/zurb/foundation-icon-fonts</upstream.url>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destDir>
     </properties>
@@ -59,7 +73,9 @@
                             <goal>download-single</goal>
                         </goals>
                         <configuration>
+                            <!--url>${upstream.url}</url-->
                             <url>${upstream.url}/archive</url>
+                            <!--fromFile>SOME_FILE-${upstream.version}.zip</fromFile-->
                             <fromFile>master.zip</fromFile>
                             <toFile>${project.build.directory}/${project.artifactId}.zip</toFile>
                         </configuration>
@@ -80,7 +96,8 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/SOME_SUBDIR-${upstream.version}" />
+                                    <!--fileset dir="${project.build.directory}/SOME_SUBDIR-${upstream.version}" /-->
+                                    <fileset dir="${project.build.directory}/foundation-icon-fonts-master" />
                                 </move>
                             </target>
                         </configuration>
