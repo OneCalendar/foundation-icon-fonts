@@ -1,5 +1,5 @@
-# Quickstart
+WebJar for Foundation Icon Fonts
 
-```
-bower install zurb/foundation-icon-fonts
-```
+More info: http://webjars.org
+
+Upstream: https://github.com/zurb/foundation-icon-fonts
