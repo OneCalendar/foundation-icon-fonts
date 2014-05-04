@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>foundation-icon-fonts</artifactId>
-    <version>d596a3cfb3-SNAPSHOT</version>
+    <version>d596a3cfb3</version>
     <name>Foundation Icon Fonts</name>
     <description>WebJar for Zurb Foundation Icon Fonts</description>
     <url>http://webjars.org</url>
@@ -36,7 +36,7 @@
         <url>http://github.com/webjars/foundation-icon-fonts</url>
         <connection>scm:git:https://github.com/webjars/foundation-icon-fonts.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/foundation-icon-fonts.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>foundation-icon-fonts-d596a3cfb3</tag>
     </scm>
     
     <properties>
@@ -81,7 +81,7 @@
                                 <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
                                 <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/foundation-icon-fonts-${upstream.commit}" includes="foundation-icons*"/>
+                                    <fileset dir="${project.build.directory}/foundation-icon-fonts-${upstream.commit}" includes="foundation-icons*" />
                                 </move>
                             </target>
                         </configuration>
