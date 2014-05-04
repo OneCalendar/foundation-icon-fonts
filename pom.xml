@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>foundation-icon-fonts</artifactId>
-    <version>d596a3cfb3</version>
+    <version>0.0-SNAPSHOT</version>
     <name>Foundation Icon Fonts</name>
     <description>WebJar for Zurb Foundation Icon Fonts</description>
     <url>http://webjars.org</url>
@@ -36,7 +36,7 @@
         <url>http://github.com/webjars/foundation-icon-fonts</url>
         <connection>scm:git:https://github.com/webjars/foundation-icon-fonts.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/foundation-icon-fonts.git</developerConnection>
-        <tag>foundation-icon-fonts-d596a3cfb3</tag>
+        <tag>HEAD</tag>
     </scm>
     
     <properties>
